@@ -1,0 +1,28 @@
+body{background:#eeeeee}
+.g-top{background:#595959; color:#fff; margin:0; text-align:center; line-height:35px; height:35px; position:relative;}
+.g-top .btn{position:absolute; left:10px; top:10px; background:#acacac; color:#ffffff; font-size:11px; }
+.top-img img{ width:100%;}
+.g-cont{padding:30px 15px; background-color:#f1f1f1}
+.g-cont ul{}
+.g-cont ul li{margin:0 0 10px;}
+.g-cont ul li input,
+.g-cont ul li textarea{border:0;background:#fff;}
+.g-cont .name{float:left; width:100%;}
+.g-cont .password{float:right; width:48%;}
+.g-cont .msg
+.g-cont .msg .form-control{word-break: break-all;}
+.g-cont .btn{background:#595959; color:#ffffff; font-size:13px; font-weight:bold; display:block;}
+
+.guestbook .cont{background:url(bg-gb.png) repeat; margin:8px 0px 0; margin-top:0;}
+.guestbook .cont li{padding:15px; border-bottom:1px dotted #fff; text-align:left; }
+.guestbook .cont li:last-child{border-bottom:0;}
+.guestbook .cont,
+.guestbook .cont a{color:#fff; font-size:11px; line-height:16px; }
+.guestbook .cont .name{display:inline-block; padding-right:3px;}
+.guestbook .cont .name:after{content: " | "; opacity:0.5}
+.guestbook .cont .date{display:inline-block; padding-left:3px;}
+.guestbook .cont .memo{font-weight:bold; display:block; padding-top:5px; word-break: break-all;}
+.guestbook .cont .write{text-align:right;}
+
+.delform{margin-top:10px;}
+.delform .delmsg{margin-bottom:5px;color:#939393;font-size:12px;}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/common.css" rel="stylesheet">
+<link href="/guestbook.css" rel="stylesheet">
+
+<title>방명록 (K8S) 에러 발생</title>
+</head>
+<body>
+	<div class="guestbook list displaynone" style="display: block;">
+		<ul class="cont">
+			<li>
+				<p class="memo">
+HealthCheck : Some internal error has occurred in v1 pod [[${host.name}]] ([[${host.ip}]])
+				</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

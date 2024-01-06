@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/common.css" rel="stylesheet">
+<link href="/guestbook.css" rel="stylesheet">
+
+<title>방명록 (K8S)</title>
+</head>
+<body>
+	<div class="guestbook list displaynone" style="display: block;">
+		<ul class="cont">
+			<li>
+				<p class="memo">
+HealthCheck : This is v1 running in pod [[${host.name}]] ([[${host.ip}]])
+				</p>
+			</li>
+		</ul>
+	</div>
+	
+	<h4 class="g-top">방명록 v1 aa</h4>
+	<div class="top-img">
+		<img src="/bg-guestbook.jpg">
+	</div>
+	<form action="/" method="post" id="frm" enctype="multipart/form-data">
+		<div class="g-cont">
+			<ul>
+				<li class="name"><input name="name" type="text" maxlength="20" placeholder="이름" class="form-control"></li>
+				<li class="msg"><textarea name="content" maxlength="200" placeholder="내용을 입력해주세요" class="form-control" rows="3"></textarea></li>
+				<li>파일첨부<input type="file" name="uploadingFile"></li>
+			</ul>
+			<p class="btn btn-lg" onclick="document.getElementById('frm').submit();">방명록 남기기</p>
+		</div>
+	</form>
+
+	<div class="guestbook list displaynone" style="display: block;">
+		<ul class="cont">
+			<li th:each="post : ${posts}">
+				<p class="name" th:text="${post.name}"></p>
+				<p class="date"  th:text="${post.writeDate}"></p>
+				<p class="memo"  th:text="${post.content}"></p>
+				첨부파일&nbsp;:&nbsp;<a th:href="@{'/downloadFile/' + ${post.attachedFile}}" th:text="${post.attachedFile}"></a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
